@@ -7,8 +7,11 @@ function getValueHomogenea(){
         var img = document.createElement('img');
         img.src = 'img/ecuaciones/'+d+'.png';
         par.appendChild(img);
+        solucionEcuacion(d);
     }else {
         $("#ecuacion").html('<span class="badge badge-danger">Elija ecuacion</span>'); 
+        $("#solucion").html(''); 
+        $("#grafica").html(''); 
     }
 }
 
@@ -21,8 +24,11 @@ function getValueNoHomogenea(){
         var img = document.createElement('img');
         img.src = 'img/ecuaciones/'+d+'.png';
         par.appendChild(img);
+        solucionEcuacion(d);
     }else {
         $("#ecuacion").html('<span class="badge badge-danger">Elija ecuacion</span>'); 
+        $("#solucion").html(''); 
+        $("#grafica").html(''); 
     }
 }
 
@@ -34,11 +40,29 @@ function getValorInicial(){
         var img = document.createElement('img');
         img.src = 'img/ecuaciones/'+d+'.png';
         par.appendChild(img);
+        solucionEcuacion(d);
     }else {
-        $("#ecuacion").html('<span class="badge badge-danger">Elija ecuacion</span>'); 
+        $("#ecuacion").html('<span class="badge badge-danger">Elija ecuacion</span>');
+        $("#solucion").html(''); 
+        $("#grafica").html(''); 
+
+
     }
 }
 
 function solucionEcuacion(valor){
-    
+    $("#solucion").html(''); 
+    var par = document.getElementById('solucion');
+    var img = document.createElement('img');
+    img.src = 'img/soluciones/'+valor+'.png';
+    par.appendChild(img);
+   // graficaEcuacion(valor);
+}
+
+function graficaEcuacion(valor){
+    $("#grafica").html(''); 
+    var par = document.getElementById('grafica');
+    var img = document.createElement('img');
+    img.src = 'img/graficas/'+valor+'.png';
+    par.appendChild(img);
 }

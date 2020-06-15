@@ -14,7 +14,7 @@
 
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-lighnavbar-light ">
                 <a class="navbar-brand" href="#">MathPro</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
                     
                     <li class="nav-item mr-2">
                         <div class="form-group">
-                            <label for="ecHomogenea">Homogéneas</label>
+                            <label for="ecHomogenea" class="badge badge-info">Homogéneas</label>
                             <select class="form-control" id="ecHomogenea" onchange="getValueHomogenea()">
                                 <option>Selecciona ecuación</option>
                                 <option value="1">Ecuacion 1</option>
@@ -35,7 +35,7 @@
                     </li>
                     <li class="nav-item mr-2">
                         <div class="form-group">
-                            <label for="ecNoHomogenea">No Homogéneas</label>
+                            <label for="ecNoHomogenea" class="badge badge-info">No Homogéneas</label>
                             <select class="form-control" id="ecNoHomogenea" onchange="getValueNoHomogenea()">
                                     <option>Selecciona ecuación</option>
                                 <option value="3">Ecuacion 1</option>
@@ -45,7 +45,7 @@
                     </li>
                     <li class="nav-item">
                         <div class="form-group">
-                            <label for="ecValorInicial">Problemas de valor inicial</label>
+                            <label for="ecValorInicial" class="badge badge-info">Problemas de valor inicial</label>
                             <select class="form-control" id="ecValorInicial" onchange="getValorInicial()">
                                 <option>Selecciona ecuación</option>
                                 <option value="5">Ecuación 1</option>
@@ -61,10 +61,13 @@
                         <!-- <button class="btn btn-primary my-2 my-sm-0" type="submit">Ver solución</button> -->
                     </form>
                 </div>
-            </nav>
+        </nav>
     <div class="container">
-        <div class="solucion">
-            
+        <div id="solucion">
+
+        </div>
+        <div id="grafica">
+
         </div>
     </div>
     <script src="js/main.js"></script>
